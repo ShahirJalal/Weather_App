@@ -1,0 +1,49 @@
+*{
+    background-color: #3e3e42;
+    height: auto;
+    width: auto;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.display #city-name {
+    border: 1px white solid;
+    margin-top: 0%;
+    background-color: aqua;
+}
+
+.display {
+    border: 1px white solid;
+    background-color: aquamarine;
+}
+
+.display .item{
+    background-color: aquamarine;
+}
+
+.input-box {
+    border: 1px white solid;
+    text-align: center;
+}
+
+
+.input-box #input {
+    background-color: white;
+}
+
+.input-box #add {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.input-box #add:hover {
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+}
