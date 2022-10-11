@@ -36,13 +36,13 @@
     background-color: white;
 }
 
-.input-box #add {
+#add {
     background-color: white;
     border: none;
     cursor: pointer;
 }
 
-.input-box #add:hover {
+#add:hover {
     background-color: gray;
     border: none;
     cursor: pointer;
