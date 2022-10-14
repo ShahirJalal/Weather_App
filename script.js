@@ -34,6 +34,22 @@ btn.addEventListener("click", function(){
         document.querySelector(".windspeed").innerHTML = `<img id="windIcon" src="./wind.png">`+`${windSpeed}km/h`
         document.querySelector("#divIcon").innerHTML = `<img id="wIcon" src="http://openweathermap.org/img/wn/${icon}@2x.png">`
         document.querySelector(".flag").innerHTML = `<img id="flagIcon" src="https://countryflagsapi.com/svg/${country}">`
+
+        let date = new Date();
         
+        function displayTime() {
+
+            const time = res['timezone']
+            let date = new Date()
+            let utc = date.getTime()+(date.getTimezoneOffset()*60000)
+            let newDate = new Date(utc+(time*1000))
+            let hours = newDate.getHours()
+            let minute = newDate.getMinutes()
+            let second = newDate.getSeconds()
+            let session = document.querySelector("#session")
+            let day = newDate.getDate()
+            let month = newDate.getMonth()
+            let year = newDate.getFullYear()
+        }
     })
 })
