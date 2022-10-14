@@ -1,4 +1,144 @@
-const cityInput = document.getElementById("input");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<style>
+    body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* div {
+    border: 1px solid white
+} */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    inline-size: 800px;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+    /* background-color: darkblue; */
+    margin-top: 5%;
+}
+
+#cityOutput {
+    font-size: 50px;
+}
+
+#flagIcon {
+    width: 100px;
+}
+
+.body {
+    display: flex;
+    margin: 0 auto;
+}
+
+#barometer, #droplet, #windIcon {
+    width: 30px;
+    height: 30px;
+}
+
+#wIcon {
+    width: 100px;
+    height: 100px;
+}
+
+/* .pressure p, .humidity p, .wind p {
+    display: inline;
+} */
+
+.flag {
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#temp {
+    font-size: 91px;
+    /* border: 1px solid white; */
+    margin-bottom: 0;
+    margin-top: 0; 
+    font-weight: lighter;
+}
+</style>
+<body>
+    <div class="content">
+        <div class="flag">
+        </div>
+
+        <div class="header">
+            <h1 id="cityOutput"></h1>
+            <div id="localtime">
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+                <span id="session"></span>
+                <span>&nbsp&nbsp</span>
+                <span id="date"></span>
+                <span id="month"></span>
+                <span id="year"></span>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="column_1">
+                
+                <div class="temperature">
+                    <h1 id="temp"></h1>
+                    <p class="minMax"></p>
+                </div>
+
+                <div class="pressure">
+                    <p id="press"></p>
+                </div>
+
+                <div class="humidity">
+                    <p id="humid"></p>
+                </div>
+            </div>
+
+            <div class="column_2">
+
+                <div class="icon">
+                    <div id="divIcon">
+                    </div>
+                    <br>
+                    <p id="description"></p>
+                </div>
+                
+                <div class="feelsLike">
+                    <p class="fL"></p>
+                </div>
+
+                <div class="wind">
+                    <p class="windspeed"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Enter your city..." id="input">
+            <br>
+            <br>
+            <input type="submit" name="check" id="add">
+        </div>
+    </div>
+    <script>
+        const cityInput = document.getElementById("input");
 const btn = document.querySelector("#add");
 
 apiKey = "75adaa7cc887057971ff05253eefb707"
@@ -76,3 +216,6 @@ btn.addEventListener("click", function(){
         setInterval(displayTime, 10)
     })
 })
+    </script>
+</body>
+</html>
