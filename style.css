@@ -23,7 +23,7 @@ body {
 }
 
 #flagIcon {
-    width: 40px;
+    width: 100px;
 }
 
 .body {
@@ -41,9 +41,9 @@ body {
     height: 100px;
 }
 
-.pressure p, .humidity p, .wind p {
+/* .pressure p, .humidity p, .wind p {
     display: inline;
-}
+} */
 
 .flag {
     margin: 0 auto;

@@ -25,13 +25,15 @@ btn.addEventListener("click", function(){
         }
 
         document.querySelector("#cityOutput").innerHTML = `${city}, ${country}`
-        document.querySelector("#temp").innerHTML = `${conversion(temperature)} &#186 C`
-        document.querySelector(".minMax").innerHTML = `&#8595${conversion(minTemp)}&#186 C &nbsp &#8593${conversion(maxTemp)}&#186 C`
-        document.querySelector("#press").innerHTML = `${pressure} hPa`
-        document.querySelector("#humid").innerHTML = `${humidity} %`
+        document.querySelector("#temp").innerHTML = `${conversion(temperature)} &#186C`
+        document.querySelector(".minMax").innerHTML = `&#8595 ${conversion(minTemp)} &#186C &nbsp &#8593 ${conversion(maxTemp)} &#186C`
+        document.querySelector("#press").innerHTML = `<img id="barometer" src="./barometer.png">`+`${pressure} hPa`
+        document.querySelector("#humid").innerHTML = `<img id="droplet" src="./humidity.png">`+`${humidity} %`
         document.querySelector("#description").innerHTML = `${description}`
-        document.querySelector(".fL").innerHTML = `Feels like: ${conversion(feelsLike)}&#186 C`
-        document.querySelector(".windspeed").innerHTML = `${windSpeed}km/h`
+        document.querySelector(".fL").innerHTML = `Feels like: ${conversion(feelsLike)}&#186C`
+        document.querySelector(".windspeed").innerHTML = `<img id="windIcon" src="./wind.png">`+`${windSpeed}km/h`
+        document.querySelector("#divIcon").innerHTML = `<img id="wIcon" src="http://openweathermap.org/img/wn/${icon}@2x.png">`
+        document.querySelector(".flag").innerHTML = `<img id="flagIcon" src="https://countryflagsapi.com/svg/${country}">`
         
     })
 })
