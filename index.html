@@ -4,25 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="display">
-            <h2 id="city-name">City Name:</h2>
-            <p class="item" id="cloud-condition">Cloud Condition:</p>
-            <p class="item" id="temperature">Temperature:</p>
-            <p class="item" id="wind-speed">Wind Speed:</p>
+    <div class="content">
+        <div class="flag">
+            <img id="flagIcon" src="./Flag.png">
         </div>
 
-        <div class="input-box">
-            <input type="text" placeholder="Enter any city..." id="input">
-            <button id="add">Submit</button>
+        <div class="header">
+            <h1 id="cityOutput"></h1>
+            <div id="localtime">
+                <span id="hours">Local Time: 23</span>
+                <span id="minutes">:59</span>
+                <span id="seconds">:59</span>
+                <span id="session">AM</span>
+                <span>&nbsp&nbsp</span>
+                <span id="date">13</span>
+                <span id="month">/04</span>
+                <span id="year">/2022</span>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="column_1">
+                
+                <div class="temperature">
+                    <h1 id="temp"></h1>
+                    <p class="minMax"></p>
+                </div>
+
+                <div class="pressure">
+                    <img id="barometer" src="./barometer.png">
+                    <p id="press"></p>
+                </div>
+
+                <div class="humidity">
+                    <img id="droplet" src="./humidity.png">
+                    <p id="humid"></p>
+                </div>
+            </div>
+
+            <div class="column_2">
+
+                <div class="icon">
+                    <div id="divIcon">
+                        <img id="wIcon" src="./weather-icon-png-11064.png">
+                    </div>
+                    <br>
+                    <p id="description"></p>
+                </div>
+                
+                <div class="feelsLike">
+                    <p class="fL"></p>
+                </div>
+
+                <div class="wind">
+                    <img id="windIcon" src="./wind.png">
+                    <p class="windspeed">130km/h</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Enter your city..." id="input">
+            <br>
+            <br>
+            <input type="submit" name="check" id="add">
         </div>
     </div>
-
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

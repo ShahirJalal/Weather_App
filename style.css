@@ -1,49 +1,66 @@
-*{
-    background-color: #3e3e42;
-    height: auto;
-    width: auto;
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* div {
+    border: 1px solid white
+} */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    inline-size: 800px;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+    /* background-color: darkblue; */
+    margin-top: 5%;
 }
 
-.display #city-name {
-    border: 1px white solid;
-    margin-top: 0%;
-    background-color: aqua;
+#cityOutput {
+    font-size: 50px;
 }
 
-.display {
-    border: 1px white solid;
-    background-color: aquamarine;
+#flagIcon {
+    width: 40px;
 }
 
-.display .item{
-    background-color: aquamarine;
+.body {
+    display: flex;
+    margin: 0 auto;
 }
 
-.input-box {
-    border: 1px white solid;
+#barometer, #droplet, #windIcon {
+    width: 30px;
+    height: 30px;
+}
+
+#wIcon {
+    width: 100px;
+    height: 100px;
+}
+
+.pressure p, .humidity p, .wind p {
+    display: inline;
+}
+
+.flag {
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.form {
+    margin: 0 auto;
     text-align: center;
 }
 
-
-.input-box #input {
-    background-color: white;
-}
-
-#add {
-    background-color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#add:hover {
-    background-color: gray;
-    border: none;
-    cursor: pointer;
+#temp {
+    font-size: 91px;
+    /* border: 1px solid white; */
+    margin-bottom: 0;
+    margin-top: 0;
 }
